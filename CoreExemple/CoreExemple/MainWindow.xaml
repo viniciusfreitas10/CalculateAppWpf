@@ -1,0 +1,52 @@
+﻿<Window x:Class="Calculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calculator"
+        mc:Ignorable="d"
+        Title="Calculator" Height="525" Width="350">
+    
+    <Grid Background="AliceBlue" Margin="10">
+       <!--<StackPanel Background="Azure" VerticalAlignment="Center" Margin="10,0,20,10">
+            <Label Background="Azure" Content="Result:" Margin="0,0,0,10" BorderBrush="Black"></Label>
+        </StackPanel>-->
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        
+        <Label x:Name="result" Content="0" Grid.ColumnSpan="4" VerticalAlignment="Bottom" HorizontalAlignment="Right" FontSize="60" ></Label>
+        <Button x:Name="clearButton" Content="AC" Grid.Row="1" Margin="5"></Button>
+        <Button x:Name="negativeButton" Content="+/-" Grid.Row="1" Margin="5" Grid.Column="1"></Button>
+        <Button x:Name="percentageButton" Content="%" Grid.Column="2" Grid.Row="1" Margin="5"></Button>
+        <Button Content="/" x:Name="divisionButton" Click="OperationButton_Click" Grid.Column="3" Grid.Row="1" Margin="5"></Button>
+        <Button x:Name="sevenButton" Click="NumberButton_click" Content="7" Grid.Column="0" Grid.Row="2" Margin="5"></Button>
+        <Button x:Name="eigthButton" Click="NumberButton_click" Content="8" Grid.Column="1" Grid.Row="2" Margin="5"></Button>
+        <Button Content="9" x:Name="nineButton" Click="NumberButton_click" Grid.Column="2" Grid.Row="2" Margin="5"></Button>
+        <Button Content="*"  x:Name="multipleButton" Click="OperationButton_Click"  Grid.Column="3" Grid.Row="2" Margin="5"></Button>
+        <Button Content="4" x:Name="fourButton" Click="NumberButton_click" Grid.Column="0" Grid.Row="3" Margin="5"></Button>
+        <Button Content="5"  x:Name="fiveButton" Click="NumberButton_click"  Grid.Column="1" Grid.Row="3" Margin="5"></Button>
+        <Button Content="6" x:Name="sixButton"  Click="NumberButton_click" Grid.Column="2" Grid.Row="3" Margin="5"></Button>
+        <Button Content="-"  x:Name="minusButton" Click="OperationButton_Click" Grid.Column="3" Grid.Row="3" Margin="5"></Button>
+        <Button Content="1" x:Name="oneButton" Click="NumberButton_click"  Grid.Column="0" Grid.Row="4" Margin="5"></Button>
+        <Button Content="2" x:Name="twoButton" Click="NumberButton_click" Grid.Column="1" Grid.Row="4" Margin="5"></Button>
+        <Button Content="3" x:Name="threeButton" Click="NumberButton_click" Grid.Column="2" Grid.Row="4" Margin="5"></Button>
+        <Button Content="+"  x:Name="plusButton" Click="OperationButton_Click" Grid.Column="3" Grid.Row="4" Margin="5"></Button>
+        <Button Content="0" x:Name="zeroButton" Click="NumberButton_click" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="5" Margin="5" FontSize="30"></Button>
+        <Button Content="." Click="pointButton_Click" Grid.Column="2" Grid.Row="5" Margin="5"></Button>
+        <Button x:Name="equalButton" Content="=" Grid.Column="3" Grid.Row="5" Margin="5" ></Button>
+    </Grid>
+    
+</Window>
